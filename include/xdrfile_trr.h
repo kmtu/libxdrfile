@@ -48,11 +48,11 @@ extern "C" {
   
   /* Read one frame of an open xtc file. If either of x,v,f,box are
      NULL the arrays will be read from the file but not used.  */
-  extern int read_trr(XDRFILE *xd,int natoms,int *step,double *t,double *lambda,
+  extern int read_trr(XDRFILE *xd,int natoms,int *step,real *t,real *lambda,
 		      matrix box,rvec *x,rvec *v,rvec *f);
 
   /* Write a frame to xtc file */
-  extern int write_trr(XDRFILE *xd,int natoms,int step,double t,double lambda,
+  extern int write_trr(XDRFILE *xd,int natoms,int step,real t,real lambda,
 		       matrix box,rvec *x,rvec *v,rvec *f);
 
   

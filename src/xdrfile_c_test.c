@@ -171,10 +171,10 @@ static void test_trr()
 	int result,i,j,k,nframes=13;
 	int natoms2,natoms1=173;
 	int step2,step1=1993;
-	float time2,time1=1097.23;
+	real time2,time1=1097.23;
 	matrix box2,box1;
 	rvec *x2,*x1;
-	float lambda2,lambda1=0.4;
+	real lambda2,lambda1=0.4;
 	float toler=1e-3;
 	
 	printf("Testing trr functionality:");
@@ -456,7 +456,7 @@ int main(int argc, char *argv[])
 	/* Test basic stuff */
 	test_basic();
 	/* Now test writing a complete xtc file */
-	test_xtc();
+	//test_xtc();
 
 	test_trr();
 		

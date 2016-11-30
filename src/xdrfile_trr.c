@@ -484,13 +484,13 @@ int read_trr_natoms(char *fn,int *natoms)
 	return exdrOK;
 }
 
-int write_trr(XDRFILE *xd,int natoms,int step,double t,double lambda,
+int write_trr(XDRFILE *xd,int natoms,int step,real t,real lambda,
 			  matrix box,rvec *x,rvec *v,rvec *f)
 {
 	return do_trn(xd,0,&step,&t,&lambda,box,&natoms,x,v,f);
 }
 
-int read_trr(XDRFILE *xd,int natoms,int *step,double *t,double *lambda,
+int read_trr(XDRFILE *xd,int natoms,int *step,real *t,real *lambda,
 			 matrix box,rvec *x,rvec *v,rvec *f)
 {
 	return do_trn(xd,1,step,t,lambda,box,&natoms,x,v,f);

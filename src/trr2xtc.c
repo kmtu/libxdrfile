@@ -64,11 +64,12 @@ void ReadWrite(char *rfile, char *wfile, int in_xtcBool, int out_xtcBool, int in
   int result_xtc, result_trr;
   int natoms_xtc, natoms_trr;
   int step_xtc, step_trr;
-  float time_xtc, time_trr;
+  float time_xtc;
+  real time_trr;
   matrix box_xtc, box_trr;
   rvec *x_xtc, *x_trr, *v_trr, *f_trr;
   float prec_xtc = 1000.0;
-  float lambda_trr = 0.0;
+  real lambda_trr = 0.0;
   
       
   xd_read = xdrfile_open(rfile, "r");
