@@ -424,7 +424,7 @@ static int do_htrn(XDRFILE *xd,mybool bRead,t_trnheader *sh,
 	return exdrOK;
 }
 
-static int do_trn(XDRFILE *xd,mybool bRead,int *step,double *t,double *lambda,
+static int do_trn(XDRFILE *xd,mybool bRead,int *step,real *t,real *lambda,
 				  matrix box,int *natoms,rvec *x,rvec *v,rvec *f)
 {
     t_trnheader *sh;
