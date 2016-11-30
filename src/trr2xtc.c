@@ -66,8 +66,10 @@ void ReadWrite(char *rfile, char *wfile, int in_xtcBool, int out_xtcBool, int in
   int step_xtc, step_trr;
   float time_xtc;
   real time_trr;
-  matrix box_xtc, box_trr;
-  rvec *x_xtc, *x_trr, *v_trr, *f_trr;
+  matrix box_trr;
+  rvec *x_trr, *v_trr, *f_trr;
+  fmatrix box_xtc;
+  frvec *x_xtc;
   float prec_xtc = 1000.0;
   real lambda_trr = 0.0;
   
@@ -95,7 +97,7 @@ void ReadWrite(char *rfile, char *wfile, int in_xtcBool, int out_xtcBool, int in
       if (exdrOK != result_xtc)
 	die_r("read_xtc_natoms",result_xtc);
       
-      x_xtc = (rvec *)calloc(natoms_xtc, sizeof(x_xtc[0]));
+      x_xtc = (frvec *)calloc(natoms_xtc, sizeof(x_xtc[0]));
 
       while(1)
 	{
@@ -126,7 +128,7 @@ void ReadWrite(char *rfile, char *wfile, int in_xtcBool, int out_xtcBool, int in
       if (exdrOK != result_xtc)
 	die_r("read_xtc_natoms",result_xtc);
       
-      x_xtc = (rvec *)calloc(natoms_xtc, sizeof(x_xtc[0]));
+      x_xtc = (frvec *)calloc(natoms_xtc, sizeof(x_xtc[0]));
       
       while(1)
 	{

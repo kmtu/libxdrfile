@@ -113,6 +113,8 @@ extern "C"
 #endif
 	typedef real matrix[DIM][DIM];
 	typedef real rvec[DIM];
+	typedef float fmatrix[DIM][DIM];
+	typedef float frvec[DIM];
 	typedef int   mybool;
 
 

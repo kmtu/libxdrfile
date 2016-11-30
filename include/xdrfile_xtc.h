@@ -49,12 +49,12 @@ extern "C" {
   
   /* Read one frame of an open xtc file */
   extern int read_xtc(XDRFILE *xd,int natoms,int *step,float *time,
-		      matrix box,rvec *x,float *prec);
+		      fmatrix box,frvec *x,float *prec);
   
   /* Write a frame to xtc file */
   extern int write_xtc(XDRFILE *xd,
 		       int natoms,int step,float time,
-		       matrix box,rvec *x,float prec);
+		       fmatrix box,frvec *x,float prec);
   
 #ifdef __cplusplus
 }

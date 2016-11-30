@@ -88,8 +88,8 @@ static void test_xtc()
 	int natoms2,natoms1=173;
 	int step2,step1=1993;
 	float time2,time1=1097.23;
-	matrix box2,box1;
-	rvec *x2,*x1;
+	fmatrix box2,box1;
+	frvec *x2,*x1;
 	float prec2,prec1=1000;
 	float toler=1e-3;
 	
@@ -456,7 +456,7 @@ int main(int argc, char *argv[])
 	/* Test basic stuff */
 	test_basic();
 	/* Now test writing a complete xtc file */
-	//test_xtc();
+	test_xtc();
 
 	test_trr();
 		

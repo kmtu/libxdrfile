@@ -60,7 +60,7 @@ static int xtc_header(XDRFILE *xd,int *natoms,int *step,float *time,mybool bRead
 	return exdrOK;
 }
 
-static int xtc_coord(XDRFILE *xd,int *natoms,matrix box,rvec *x,float *prec,
+static int xtc_coord(XDRFILE *xd,int *natoms,fmatrix box,frvec *x,float *prec,
 					 mybool bRead)
 {
 	int i,j,result;
@@ -104,7 +104,7 @@ int read_xtc_natoms(char *fn,int *natoms)
 
 int read_xtc(XDRFILE *xd,
 			 int natoms,int *step,float *time,
-			 matrix box,rvec *x,float *prec)
+			 fmatrix box,frvec *x,float *prec)
 /* Read subsequent frames */
 {
 	int result;
@@ -120,7 +120,7 @@ int read_xtc(XDRFILE *xd,
 
 int write_xtc(XDRFILE *xd,
 			  int natoms,int step,float time,
-			  matrix box,rvec *x,float prec)
+			  fmatrix box,frvec *x,float prec)
 /* Write a frame to xtc file */
 {
 	int result;
