@@ -255,7 +255,7 @@ static int do_htrn(XDRFILE *xd,mybool bRead,t_trnheader *sh,
             {
                 for(i=0; (i<sh->natoms); i++)
                     for(j=0; (j<DIM); j++)
-                        if (NULL != x)
+                        if (NULL != v)
                         {
                             dx[i*DIM+j] = v[i][j];
                         }
@@ -278,7 +278,7 @@ static int do_htrn(XDRFILE *xd,mybool bRead,t_trnheader *sh,
             {
                 for(i=0; (i<sh->natoms); i++)
                     for(j=0; (j<DIM); j++)
-                        if (NULL != x)
+                        if (NULL != f)
                         {
                             dx[i*DIM+j] = f[i][j];
                         }
@@ -381,7 +381,7 @@ static int do_htrn(XDRFILE *xd,mybool bRead,t_trnheader *sh,
             {
                 for(i=0; (i<sh->natoms); i++)
                     for(j=0; (j<DIM); j++)
-                        if (NULL != x)
+                        if (NULL != v)
                         {
                             fx[i*DIM+j] = v[i][j];
                         }
@@ -402,7 +402,7 @@ static int do_htrn(XDRFILE *xd,mybool bRead,t_trnheader *sh,
             {
                 for(i=0; (i<sh->natoms); i++)
                     for(j=0; (j<DIM); j++)
-                        if (NULL != x)
+                        if (NULL != f)
                         {
                             fx[i*DIM+j] = f[i][j];
                         }
